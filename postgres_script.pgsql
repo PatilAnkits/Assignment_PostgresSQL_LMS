@@ -41,7 +41,7 @@ Create table BOOK_ISSUE(BOOK_ISSUE_NO int, MEMBER_ID Varchar(10) NOT NULL, BOOK_
 
 
 
-Insert into MEMBERS Values('LM001', 'Ankit', 'Pune', '2021-02-12', '2022-02-11','Temporary');
+Insert into MEMBERS Values('LM001', 'Ankit', 'Pune', '2021-02-12', '2021-03-11','Temporary');
 
 
 
@@ -63,8 +63,8 @@ Insert into BOOKS_DETAILS Values('BL000003', 'Java How To Do Program', 'JAVA', '
 
 
 
-Insert into BOOK_ISSUE Values (001, 'LM001', 'BL000010', '2012-05-01', '2012-05-16', '2012-05-16', 'R0');
-Insert into BOOK_ISSUE Values (002, 'LM002', 'BL000002', '2012-05-01', '2012-05-06','2012-05-16', 'R2');
+Insert into BOOK_ISSUE Values (001, 'LM001', 'BL000010', '2021-05-01', '2021-05-16', '2021-05-16', 'R0');
+Insert into BOOK_ISSUE Values (002, 'LM002', 'BL000002', '2021-05-01', '2021-05-06','2021-05-16', 'R2');
 
 --  borrow_returned trigger 
 --
@@ -165,18 +165,18 @@ FROM members m JOIN
  
   book_issue_no | member_id | book_code | date_issue | date_return | date_returned | fine_range
 ---------------+-----------+-----------+------------+-------------+---------------+------------
-             1 | LM001     | BL000010  | 2012-05-01 | 2012-05-16  | 2012-05-16    | R0
-             2 | LM002     | BL000002  | 2012-05-01 | 2012-05-06  | 2012-05-16    | R2
+             1 | LM001     | BL000010  | 2021-05-01 | 2021-05-16  | 2021-05-16    | R0
+             2 | LM002     | BL000002  | 2021-05-01 | 2021-05-06  | 2021-05-16    | R2
 			 
 			 
 -- Members table
 
   id   | member_name |  city   | date_register | date_expire | membership_status | max_no_books
 -------+-------------+---------+---------------+-------------+-------------------+--------------
- LM001 | Ankit       | Pune    | 2021-02-12    | 2022-02-11  | Temporary         |
- LM002 | Amit        | Pune    | 2021-02-12    | 2022-02-11  | Permanent         |
- LM003 | Nilesh      | Pune    | 2021-02-12    | 2022-02-11  | Permanent         |
- LM004 | Prem        | Jalgaon | 2021-02-12    | 2022-02-11  | Temporary         |
+ LM001 | Ankit       | Pune    | 2021-02-12    | 2022-02-11  | Temporary         | 5
+ LM002 | Amit        | Pune    | 2021-02-12    | 2022-02-11  | Permanent         | 5
+ LM003 | Nilesh      | Pune    | 2021-02-12    | 2022-02-11  | Permanent         | 5
+ LM004 | Prem        | Jalgaon | 2021-02-12    | 2022-02-11  | Temporary         | 5
 (4 rows)
  
  

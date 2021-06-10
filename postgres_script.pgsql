@@ -10,6 +10,7 @@ Create table MEMBERS(
 				DATE_REGISTER Date NOT NULL,DATE_EXPIRE Date ,
 				MEMBERSHIP_STATUS Varchar(15)NOT NULL,
 				MAX_NO_BOOKS int,
+	                        books_borrowed int,
 				Constraint LMS_cts1 PRIMARY KEY(ID));
 
 
@@ -27,6 +28,8 @@ Create table BOOKS_DETAILS(
 					AUTHOR Varchar(30) NOT NULL,
 					PUBLICATION Varchar(30),
 					PUBLISH_DATE Date,
+					TOTAL_COPIES int,
+					COPIES_LEFT int,
 					BOOK_EDITION int,PRICE decimal(8,2) NOT NULL,
 					RACK_NUM Varchar(3),DATE_ARRIVAL Date NOT NULL, 
 					SUPPLIER_ID Varchar(3) NOT NULL,
